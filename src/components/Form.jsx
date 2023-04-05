@@ -104,11 +104,11 @@ class Form extends Component {
               <option value="muito raro"> muito raro </option>
             </select>
           </label>
-          <label htmlFor="">
+          <label htmlFor="cardTrunfo">
             <input
               type="checkbox"
-              name=""
-              id=""
+              name="cardTrunfo"
+              id="cardTrunfo"
               data-testid="trunfo-input"
               checked={ cardTrunfo }
               onChange={ onInputChange }
