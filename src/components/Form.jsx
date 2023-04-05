@@ -72,7 +72,7 @@ class Form extends Component {
             </select>
           </label>
           <label htmlFor="">
-            <input type="checkbox" name="" id="" data-testid="trunfo-input"/>
+            <input type="checkbox" name="" id="" data-testid="trunfo-input" />
           </label>
           <br />
           <br />
