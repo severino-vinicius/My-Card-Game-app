@@ -90,11 +90,11 @@ class Form extends Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="">
+          <label htmlFor="cardRare">
             <h4> Raridade </h4>
             <select
-              name=""
-              id=""
+              name="cardRare"
+              id="cardRare"
               data-testid="rare-input"
               value={ cardRare }
               onChange={ onInputChange }
