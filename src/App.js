@@ -15,13 +15,40 @@ class App extends React.Component {
     cardTrunfo: false,
   };
 
+  verify = () => {
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+    } = this.state;
+    const maxAtri = 90;
+    const maxSom = 210;
+    const valCardName = cardName.length > 0;
+    const valCardDescription = cardDescription.length > 0;
+    const valCardImage = cardImage.length > 0;
+    const valCardRare = cardRare.length > 0;
+    const valSomAttri = ((+cardAttr1) + (+cardAttr2) + (+cardAttr3) <= maxSom);
+    const valNegAttribs = (+cardAttr1 >= 0) && (+cardAttr2 >= 0) && (+cardAttr3 >= 0);
+    const valAttri = ((cardAttr1 <= maxAtri)
+      && (cardAttr2 <= maxAtri) && (cardAttr3 <= maxAtri)
+    );
+    this.setState({
+      isSaveButtonDisabled: !(valCardName && valCardDescription && valCardImage
+        && valCardRare && valAttri && valSomAttri && valNegAttribs),
+    });
+  };
+
   onInputChange = ({ target }) => {
     // Caso for checkBox
     const { name } = target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
       [name]: value,
-    });
+    }, this.verify);
   };
 
   render() {
