@@ -21,7 +21,7 @@ class Form extends Component {
       <section className="formCards">
         <h1> Adicione uma nova carta </h1>
         <hr />
-        <form>
+        <div>
           <label htmlFor="cardName">
             <h4> Nome </h4>
             <input
@@ -117,13 +117,14 @@ class Form extends Component {
           <br />
           <br />
           <button
+            type="button"
             data-testid="save-button"
             disabled={ isSaveButtonDisabled }
             onClick={ onSaveButtonClick }
           >
             Salvar
           </button>
-        </form>
+        </div>
       </section>
     );
   }
