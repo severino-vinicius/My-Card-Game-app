@@ -13,6 +13,14 @@ class App extends React.Component {
     cardRare: '',
     isSaveButtonDisabled: true,
     cardTrunfo: false,
+    deck: [],
+  };
+
+  onSaveButtonClick = () => {
+    const cards = this.state;
+    this.setState((prev) => ({
+      deck: [prev.deck, cards],
+    }));
   };
 
   verify = () => {
@@ -76,6 +84,7 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           isSaveButtonDisabled={ isSaveButtonDisabled }
           onInputChange={ this.onInputChange }
+          onSaveButtonClick={ this.onSaveButtonClick }
         />
         <Card
           cardName={ cardName }
