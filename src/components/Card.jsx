@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Deck from './Deck';
 
 class Card extends Component {
   render() {
@@ -12,6 +13,7 @@ class Card extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      deck,
     } = this.props;
     return (
       <section className="Cards">
@@ -61,7 +63,22 @@ class Card extends Component {
                 Super Trunfo
               </p>
             )}
-
+          </div>
+          <hr />
+          <h5> Meu Deck </h5>
+          <div>
+            {deck.map((card) => (<Deck
+              key={ card.cardName }
+              cardName={ card.cardName }
+              cardDescription={ card.cardDescription }
+              cardAttr1={ card.cardAttr1 }
+              cardAttr2={ card.cardAttr2 }
+              cardAttr3={ card.cardAttr3 }
+              cardImage={ card.cardImage }
+              cardRare={ card.cardRare }
+              cardTrunfo={ card.cardTrunfo }
+            />
+            ))}
           </div>
         </div>
       </section>
@@ -78,6 +95,7 @@ Card.propTypes = {
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
-};
+  // deck: PropTypes.arrayOf().isRequired,
+}.isRequired;
 
 export default Card;
