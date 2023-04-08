@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import Deck from './components/Deck';
 
 class App extends React.Component {
   state = {
@@ -115,6 +116,22 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           deck={ deck }
         />
+        <hr />
+        <h5> Meu Deck </h5>
+        <div>
+          {deck.map((card) => (<Deck
+            key={ card.cardName }
+            cardName={ card.cardName }
+            cardDescription={ card.cardDescription }
+            cardAttr1={ card.cardAttr1 }
+            cardAttr2={ card.cardAttr2 }
+            cardAttr3={ card.cardAttr3 }
+            cardImage={ card.cardImage }
+            cardRare={ card.cardRare }
+            cardTrunfo={ card.cardTrunfo }
+          />
+          ))}
+        </div>
       </div>
     );
   }

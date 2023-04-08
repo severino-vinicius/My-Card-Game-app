@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Deck from './Deck';
+// import Deck from './Deck';
 
 class Card extends Component {
   render() {
@@ -13,7 +13,7 @@ class Card extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
-      deck,
+      // deck,
     } = this.props;
     return (
       <section className="Cards">
@@ -64,7 +64,7 @@ class Card extends Component {
               </p>
             )}
           </div>
-          <hr />
+          {/* <hr />
           <h5> Meu Deck </h5>
           <div>
             {deck.map((card) => (<Deck
@@ -79,7 +79,7 @@ class Card extends Component {
               cardTrunfo={ card.cardTrunfo }
             />
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     );
