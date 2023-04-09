@@ -75,11 +75,30 @@ class App extends React.Component {
     }, this.verify);
   };
 
+  // deleteItem = (itemToDelete) => {
+  //   const { deck } = this.state;
+  //   const findItemTodelete = deck.filter((card) => {
+  //     if (card.cardName !== itemToDelete && card.cardTrunfo) {
+  //       this.setState({
+  //         deck: findItemTodelete,
+  //         hasTrunfo: false,
+  //       });
+  //     } else {
+  //       this.setState({
+  //         deck: findItemTodelete,
+  //         hasTrunfo: true,
+  //       });
+  //     }
+  //   });
+  // };
   deleteItem = (itemToDelete) => {
-    const { deck } = this.state;
-    const findItemTodelete = deck.filter((card) => card.cardName !== itemToDelete);
-    this.setState({
-      deck: findItemTodelete,
+    this.setState((prev) => {
+      const updatedDeck = prev.deck.filter((card) => card.cardName !== itemToDelete);
+      const verifyTrunfo = updatedDeck.some((card) => card.cardTrunfo);
+      return {
+        deck: updatedDeck,
+        hasTrunfo: verifyTrunfo,
+      };
     });
   };
 
