@@ -75,6 +75,14 @@ class App extends React.Component {
     }, this.verify);
   };
 
+  deleteItem = (itemToDelete) => {
+    const { deck } = this.state;
+    const findItemTodelete = deck.filter((card) => card.cardName !== itemToDelete);
+    this.setState({
+      deck: findItemTodelete,
+    });
+  };
+
   render() {
     const {
       cardName,
@@ -129,6 +137,7 @@ class App extends React.Component {
             cardImage={ card.cardImage }
             cardRare={ card.cardRare }
             cardTrunfo={ card.cardTrunfo }
+            deleteItem={ this.deleteItem }
           />
           ))}
         </div>

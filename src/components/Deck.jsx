@@ -12,6 +12,7 @@ class Deck extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      deleteItem,
     } = this.props;
     return (
       <div>
@@ -20,6 +21,13 @@ class Deck extends Component {
             { cardName }
           </p>
         </div>
+        <button
+          type="button"
+          data-testid="delete-button"
+          onClick={ () => { deleteItem(cardName); } }
+        >
+          Delete
+        </button>
         <div>
           <img
             src={ cardImage }
@@ -70,6 +78,7 @@ Deck.propTypes = {
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
+  deleteItem: PropTypes.func.isRequired,
 };
 
 export default Deck;
