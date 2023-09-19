@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './App.css';
+import Sword from './iconComp/002-sword.png';
+import Shild from './iconComp/001-shield.png';
+import Brain from './iconComp/003-cerebro-humano.png';
 // import Deck from './Deck';
 
 class Card extends Component {
@@ -17,51 +21,65 @@ class Card extends Component {
     } = this.props;
     return (
       <section className="Cards">
-        <h1> Card </h1>
+        <h1 className="previewTitle"> Preview of Card </h1>
         <hr />
-        <div>
-          <div>
+        <div className="cardPreview">
+          <div className="itemCardPrev">
             <p data-testid="name-card">
               { cardName }
             </p>
           </div>
-          <div>
+          <div className="contPreviewImage">
             <img
+              className="previewImage"
               data-testid="image-card"
               src={ cardImage }
               alt={ cardName }
             />
           </div>
-          <div>
+          <div className="cardDescrPrev">
             <p data-testid="description-card">
               { cardDescription }
             </p>
           </div>
-          <div>
-            <p data-testid="attr1-card">
-              { cardAttr1 }
-            </p>
+          <div className="allAttri">
+            <div>
+              <img src={ Sword } alt="Ataque" />
+            </div>
+            <div className="itemAttrPrev">
+              <p data-testid="attr1-card">
+                { cardAttr1 }
+              </p>
+            </div>
+            <div>
+              <img src={ Shild } alt="Escudo" />
+            </div>
+            <div className="itemAttrPrev">
+              <p data-testid="attr2-card">
+                { cardAttr2 }
+              </p>
+            </div>
+            <div>
+              <img src={ Brain } alt="Inteligencia" />
+            </div>
+            <div className="itemAttrPrev">
+              <p data-testid="attr3-card">
+                { cardAttr3 }
+              </p>
+            </div>
           </div>
-          <div>
-            <p data-testid="attr2-card">
-              { cardAttr2 }
-            </p>
-          </div>
-          <div>
-            <p data-testid="attr3-card">
-              { cardAttr3 }
-            </p>
-          </div>
-          <div>
+          <div className="itemCardPrev">
             <p data-testid="rare-card">
               { cardRare }
             </p>
           </div>
           <div>
             {cardTrunfo && (
-              <p data-testid="trunfo-card">
-                Super Trunfo
-              </p>
+              <div className="superTrunfoPreview">
+                <p data-testid="trunfo-card">
+                  Super
+                </p>
+              </div>
             )}
           </div>
           {/* <hr />

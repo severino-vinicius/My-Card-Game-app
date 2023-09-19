@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  align-items: center;
+  background-color: rgb(250, 67, 69);
+  color: azure;
+  display: flex;
+  height: 70px;
+  justify-content: center;
+}
+
+.icon-Chapeu {
+  height: 30px;
+  margin-top: 4px;
+  width: 40px;
+}
+
+body {
+  background-color: rgb(30, 111, 181);
+}
+
+.Container-Cards-e-Prev {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.formCreateCards {
+  background-color: rgba(238, 245, 245, 0.288);
+  border-radius: 6px;
+  margin: 10px;
+  text-align: center;
+}
+
+.formContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 15px;
+  min-height: 450px;
+  width: 300px;
+}
+
+.hrForm {
+  height: 2px;
+  margin: 15px;
+  width: 200px;
+}
+
+hr {
+  margin: 15px;
+}
+
+.saveBtn {
+  margin: 10px;
+}
+
+.Cards {
+  background-color: rgba(238, 245, 245, 0.288);
+  border-radius: 6px;
+  margin: 10px;
+  text-align: center;
+}
+
+.Deck {
+  background-color: rgba(238, 245, 245, 0.288);
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  text-align: center;
+}
+
+.previewTitle {
+  margin: 10px;
+}
+
+.cardPreview {
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  height: 362px;
+  margin: 10px;
+  max-height: 362px;
+  max-width: 282px;
+  padding: 5px;
+}
+
+.cardDescrPrev {
+  background-color: azure;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 60px;
+  margin: 5px;
+  overflow: hidden;
+  width: 230px;
+  word-wrap: break-word;
+}
+
+.itemCardPrev {
+  background-color: azure;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  margin: 5px;
+  overflow: hidden;
+  width: 230px;
+  word-wrap: break-word;
+}
+
+.allAttri {
+  align-content: space-evenly;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.itemAttrPrev {
+  background-color: azure;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  margin: 5px;
+  overflow: hidden;
+  width: 30px;
+}
+
+.contPreviewImage {
+  border: 1px solid black;
+  height: 140px;
+  margin: 10px;
+  width: 250px;
+}
+
+.previewImage {
+  font-size: 0;
+  max-height: 140px;
+  max-width: 250px;
+}
+
+.superTrunfoPreview {
+  background-color: gold;
+  border: 1px solid black;
+  border-radius: 10px;
+  left: 90px;
+  max-width: 60px;
+  padding: 5px;
+  position: relative;
+  top: -270px;
+}

@@ -19,9 +19,9 @@ class Deck extends Component {
       deleteItem,
     } = this.props;
     return (
-      <div className="cardPreview">
-        <div className="itemCardPrev">
-          <p data-testid="name-card">
+      <div>
+        <div>
+          <p>
             { cardName }
           </p>
         </div>
@@ -32,58 +32,41 @@ class Deck extends Component {
         >
           Delete
         </button>
-        <div className="contPreviewImage">
+        <div>
           <img
-            className="previewImage"
-            data-testid="image-card"
             src={ cardImage }
             alt={ cardName }
           />
         </div>
-        <div className="cardDescrPrev">
-          <p data-testid="description-card">
+        <div>
+          <p>
             { cardDescription }
           </p>
         </div>
-        <div className="allAttri">
-          <div>
-            <img src={ Sword } alt="Ataque" />
-          </div>
-          <div className="itemAttrPrev">
-            <p data-testid="attr1-card">
-              { cardAttr1 }
-            </p>
-          </div>
-          <div>
-            <img src={ Shild } alt="Escudo" />
-          </div>
-          <div className="itemAttrPrev">
-            <p data-testid="attr2-card">
-              { cardAttr2 }
-            </p>
-          </div>
-          <div>
-            <img src={ Brain } alt="Inteligencia" />
-          </div>
-          <div className="itemAttrPrev">
-            <p data-testid="attr3-card">
-              { cardAttr3 }
-            </p>
-          </div>
+        <div>
+          <p>
+            { cardAttr1 }
+          </p>
         </div>
-        <div className="itemCardPrev">
-          <p data-testid="rare-card">
+        <div>
+          <p>
+            { cardAttr2 }
+          </p>
+        </div>
+        <div>
+          <p>
+            { cardAttr3 }
+          </p>
+        </div>
+        <div>
+          <p>
             { cardRare }
           </p>
         </div>
         <div>
-          {cardTrunfo && (
-            <div className="superTrunfoPreview">
-              <p data-testid="trunfo-card">
-                Super
-              </p>
-            </div>
-          )}
+          <p>
+            { cardTrunfo }
+          </p>
         </div>
       </div>
     );

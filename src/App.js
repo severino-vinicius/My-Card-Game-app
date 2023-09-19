@@ -2,6 +2,8 @@ import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import Deck from './components/Deck';
+import Header from './components/Header';
+import './components/App.css';
 
 class App extends React.Component {
   state = {
@@ -77,7 +79,7 @@ class App extends React.Component {
 
   // deleteItem = (itemToDelete) => {
   //   const { deck } = this.state;
-  //   const findItemTodelete = deck.filter((card) => {
+  //   const findItemTodelete = decclassName={ k.filter((card) => {
   //     if (card.cardName !== itemToDelete && card.cardTrunfo) {
   //       this.setState({
   //         deck: findItemTodelete,
@@ -117,35 +119,38 @@ class App extends React.Component {
       deck,
     } = this.state;
     return (
-      <div>
-        <Form
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-          hasTrunfo={ hasTrunfo }
-          isSaveButtonDisabled={ isSaveButtonDisabled }
-          onInputChange={ this.onInputChange }
-          onSaveButtonClick={ this.onSaveButtonClick }
-        />
-        <Card
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-          deck={ deck }
-        />
+      <>
+        <Header />
+        <div className="Container-Cards-e-Prev">
+          <Form
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+            hasTrunfo={ hasTrunfo }
+            isSaveButtonDisabled={ isSaveButtonDisabled }
+            onInputChange={ this.onInputChange }
+            onSaveButtonClick={ this.onSaveButtonClick }
+          />
+          <Card
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+            deck={ deck }
+          />
+        </div>
         <hr />
         <h5> Meu Deck </h5>
-        <div>
+        <div className="Deck">
           {deck.map((card) => (<Deck
             key={ card.cardName }
             cardName={ card.cardName }
@@ -160,7 +165,7 @@ class App extends React.Component {
           />
           ))}
         </div>
-      </div>
+      </>
     );
   }
 }
